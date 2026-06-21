@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="img/logo1.jpg" class="logo">
+            </div>
+            
+            <ul id="sidemenu">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Skills</a></li>
+                <li><a href="#">Projects</a></li>
+                <li><a href="#">Contact</a></li>
+                <i class="fa-solid fa-close" onclick="closemenu()"></i>
+               
+            </ul>
+            <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+        </nav>
+         <div class="header-text">
+            <p>WordPress & Frontend Web Developer</p>
+            <h1>Hi, I'm<span> Fatema Begum</span><br> From Barishal</h1>
+     </div>
+    </header>
+<!-- ---about start--- -->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="img/11111.jpg" >
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>I'm a passionate Frontend Web Developer from Barishal, Bangladesh. I have strong knowledge in HTML, CSS, JavaScript(Basic) & WordPress theme Customization. I enjoy building responsive, user-friendly and visually appealing websites. I am always eager to learn new technologies, improve my skills and contribute to meaningful Projects.</p>
+
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Frontend</span><br>HTML5, CSS3, JavaScript (Basic)</li>
+
+                            <li><span>Responsive Design</span><br> Mobile-Friendly Layouts</li>
+
+                            <li><span>WordPress</span><br>Theme Customization</li>
+                        </ul>
+                    </div>
+
+                     <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2020</span><br>Secondary School Certificate</li>
+
+                            <li><span>2022</span><br> Higher Secondary Certificate</li>
+
+                            <li><span>BSS in Political Science</span><br>Currently Studying (3rd Year)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!-- ---about end--- -->
+
+    <!-- ---work start--- -->
+      
+    <div id="portfolio">
+        <div class="container">
+            <h1 class="sub-title">My Work</h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="img/image001.png">
+                    <div class="layer">
+                        <h2>Personal Portfolio</h2>
+                        <p>A personal portfolio website built with HTML, CSS & JavaScript to showcase my skills, project and educational background.</p>
+                        <a href="https://mstf37184-droid.github.io/my-portfolio/">View Project</a>
+                    </div>
+                </div>
+
+                 <div class="work">
+                    <img src="img/image1.png">
+                    <div class="layer">
+                        <h2>E-commerce Website</h2>
+                        <p>A responsive E-commerce website featuring product listings, a clean layout and a user-friendly interface.</p>
+                        <a href="https://mstf37184-droid.github.io/e-commerce/">View Project</a>
+                    </div>
+                </div>
+
+                 <div class="work">
+                    <img src="img/image2.png">
+                    <div class="layer">
+                        <h2>Calculator</h2>
+                        <p>A basic calculator built with HTML, CSS & JavaScript that performs common arithmetic operations.</p>
+                        <a href="https://mstf37184-droid.github.io/calculator/">View Project</a>
+                    </div>
+                </div>
+            </div>   
+        </div>
+    </div>    
+    <!-- ---work end--- -->
+
+
+    <!-- ---contact start--- -->
+
+     <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    
+                    <p> <i class="fa-solid fa-envelope"></i>mstf37184@gmail.com</p>
+                    <p> <i class="fa-solid fa-phone"></i>01932015001</p>
+                    <div class="social-icons">
+                     
+                      <a href="#"><ion-icon name="logo-linkedin"></ion-icon></a>
+                      <a href="#"><ion-icon name="logo-github"></ion-icon></a>
+                      
+                    </div>
+                </div>
+                <div class="contact-right">
+                    <form>
+                        <input type="text" name="Name" placeholder="Your Name" required>
+
+                        <input type="email" name="Email" placeholder="Your Email" required>
+
+                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+
+                        <button type="submit" class="btn">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>Copyright &copy; 2026 | Designed & Developed by Fatema</p>
+        </div>
+     </div>
+
+
+
+    <!-- ---contact end--- -->
+
+
+
+
+
+    <script>
+        
+       var tablinks = document.getElementsByClassName("tab-links");
+
+       var tabcontents = document.getElementsByClassName("tab-contents");
+
+       function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+       }
+
+
+    </script>
+
+
+    <script>
+        
+       var sidemenu = document.getElementById("sidemenu");
+
+       function openmenu(){
+        sidemenu.style.right = "0";
+       }
+
+       function closemenu(){
+        sidemenu.style.right = "-200px";
+       }
+
+    </script>
+
+
+    
+
+    
+</body>
+</html>
